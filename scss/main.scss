@@ -48,6 +48,8 @@ section {
 
 #drop {
 	top: 70px;
+	visibility: hidden;
+	-webkit-transition: visibility 1s ease-in-out 1s;
 }
 
 #batman {
@@ -61,6 +63,10 @@ section {
 
   #move:hover ~ #batman {
     left: calc(100% - 350px);
+  }
+
+  #move:hover ~ #drop {
+  	visibility: visible;
   }
 
   #drop:active ~ #batman {
@@ -81,4 +87,3 @@ section {
   #drop:visited ~ #can {
   	content: url(../img/can-explosion.png);
   }
-
